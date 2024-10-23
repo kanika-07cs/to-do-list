@@ -1,7 +1,8 @@
-*{
-    color: black;
-    font-size: 30px;
+
+h1{
+    font-size: 50px;
     font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
     text-align: center;
 }
 .main{
@@ -20,11 +21,15 @@
     border-radius: 10px;
 }
 input{
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-image: none;
     background-color: darkgray;
     text-align: left;
 }
 button{
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-image: none;
     background-color: crimson;
     cursor: pointer;
@@ -32,6 +37,8 @@ button{
 ul li{
     list-style-type: none;
     text-align: left;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 12px 8px 12px 50px;
     user-select: none;
     cursor: pointer;
@@ -63,7 +70,8 @@ ul li cross{
     width: 50px;
     height: 50px;
     line-height: 40px;
-    font-size: 40px;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
     border-radius: 30%;
 }
