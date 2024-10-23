@@ -1,3 +1,58 @@
 *{
-    background-image: url("abstract-luxury-gradient-blue.avif");
+    color: black;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+.inside1{
+    background-image: none;
+    background-color: aquamarine;
+    width: 500px;
+    height: 300px;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 10px;
+}
+input{
+    background-image: none;
+    background-color: darkgray;
+    text-align: left;
+}
+button{
+    background-image: none;
+    background-color: crimson;
+    cursor: pointer;
+}
+ul li{
+    list-style-type: none;
+    text-align: left;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 30%;
+    background-image: url("unchecked.png");
+    background-size: cover;
+    background-position: center;
+    top:10px;
+    left:10px;
+}
+.checked{
+    color: black;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url("checked.png");
 }
