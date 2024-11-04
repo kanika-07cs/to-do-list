@@ -1,25 +1,38 @@
-const input=document.getElementById("enter");
-const list=document.getElementById("list");
+let userinput=document.getElementById("enter");
+let additems=document.getElementById("additems");
+let listitems=document.getElementById("list");
+additems.addEventListener("click", addItems);
 
-function addTask(){
-    if(input.value===''){
-        alert("Please enter something");
+function addItems(){
+    if(userinput.value===""){
+        return null;
     }
-    else{
-        let li=document.createElement("li");
-        li.innerHTML=input.value;
-        list.appendChild(li);
-        let cross=document.createElement("cross");
-        cross.innerHTML="\u00d7";
-        li.appendChild(cross);
-    }
-    input.value="";
+    let li=document.createElement("li");
+    li.innerText=userinput.value;
+    listitems.appendChild(li);
+
+    let deleteBtn =document.createElement("button");
+    deleteBtn.innerText="Delete";
+
+    let editBtn=document.createElement("button");
+    editBtn.innerText="Edit";
+
+    li.appendChild(deleteBtn);
+    li.appendChild(editBtn);
+
+    deleteBtn.addEventListener("click",function(){
+        listitems.removeChild(li);
+    });
+
+    editBtn.addEventListener("click",function(){
+        let editText=prompt();
+        if(editText==null || editText==""){
+            return null;
+        }
+        li.innerText=editText;
+        li.appendChild(deleteBtn);
+        li.appendChild(editBtn);
+    })
+
+    userinput.value="";
 }
-list.addEventListener("click",function(on){
-    if(on.target.tagName=="LI"){
-        on.target.classList.toggle("checked");
-    }
-    else if(on.target.tagName=="CROSS"){
-        on.target.parentElement.remove();
-    }
-},false)
