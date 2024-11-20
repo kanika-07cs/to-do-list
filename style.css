@@ -1,4 +1,8 @@
-
+*{
+    background-image: url("gradient-defocused-abstract.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 h1{
     font-size: 50px;
     font-family: 'Times New Roman', Times, serif;
@@ -6,16 +10,18 @@ h1{
     text-align: center;
 }
 .main{
+    background-image: url("to-do-list.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    height: 70vh;
 }
 .inside1{
     background-image: none;
-    background-color: aquamarine;
-    width: 800px;
-    height: 500px;
+    width: 600px;
+    height: 450px;
     padding: 20px;
     margin: 5px;
     border-radius: 10px;
